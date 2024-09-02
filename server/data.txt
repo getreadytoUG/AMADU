@@ -1,0 +1,4 @@
+사용한 데이터
+
+서울시농수산식품공사 주간등락품목(주별가격흐름) 정보 : http://data.seoul.go.kr/dataList/OA-13446/S/1/datasetView.do
+
