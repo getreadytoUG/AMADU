@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <title>bise</title>
+
+    <link rel="stylesheet" href="//cdn.jsdzelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+    <link rel="stylesheet" href="../css/background.css">
+    <link rel="stylesheet" href="../css/bise.css">
+    
+    <link rel="stylesheet" href="../lib/main.css" rel="stylesheet">
+    <script src="../lib/main.js" defer></script>
+    <script src="../js/bise.js" defer></script>
+    <script src="https://code.jquery.com/jquery-latest.min.js"></script>
+</head>
+<body>
+    <header>
+        <div>
+            <p class="title mint">아마두</p>
+            <p class="subtitle">&nbsp;농사비서</p>
+        </div>
+    </header>
+    <div class="headersize"></div>
+
+    <div class="container">
+        <div id='calendar' class="calendar"></div>
+        <div id="scale_bar" class="scale_bar"></div>
+        <div class="notice">
+            <p class="notice_subtitle">병해충 발생 정보</p>
+            <div class="notice_box">
+                <!-- <div class="notice_box_title">
+                    <ul class="tabs">
+                        <li class="tab-link current" data-tab="tab-1">병해충 발생 정보</li>
+                        <li class="tab-link" data-tab="tab-2">병해충 예측 결과</li>
+                    </ul>
+                </div> -->
+                <div class="notice_content" id="tab_1">
+                    <div class="color_box">
+                        <div class="color_title" id="red_title">경보</div>
+                        <ul class="color_ul" id="red"></ul>
+                    </div>
+                    <div class="color_box">
+                        <div class="color_title" id="yel_title">주의보</div>
+                        <ul class="color_ul" id="yellow"></ul>
+                    </div>
+                    <div class="color_box">
+                        <div class="color_title" id="green_title">예보</div>
+                        <ul class="color_ul" id="green"></ul>
+                    </div>
+                </div>
+                <div class="notice_content" id="tab_2">
+                    <i class="xi-error"></i>
+                    <p>서비스 준비중입니다.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div data-include-file="./banner.html" class="footer-wrap includeJs"></div>
+</body>
+<script src="../js/banner.js" defer></script>
+</html>

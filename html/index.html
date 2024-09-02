@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <title>home</title>
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+    <link rel="stylesheet" href="../css/background.css">
+    <link rel="stylesheet" href="../css/index.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <script src="../js/todayPrice.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <div>
+            <p class="title mint">아마두</p>
+            <p class="subtitle">&nbsp;AI기반 농산물 가격 예측 서비스</p>
+        </div>
+    </header>
+    <div class="headersize"></div>
+    <div class="container">
+        <div class="swiper">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+                <!-- Slides -->
+                <div class="swiper-slide">
+                    <img src="../background/1.png">
+                    <div class="contents">
+                        <div class="whiteicon">
+                            <img src="../whiteicon/1.png" alt="">
+                            <p>양파</p>
+                        </div>
+                        <div class="getitem">
+                            <p class="date"></p>
+                            <p class="price">
+                                <span class="mint" id="1_mint"></span>원<span class="unit">/kg</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <img src="../background/2.png">
+                    <div class="contents">
+                        <div class="whiteicon">
+                            <img src="../whiteicon/2.png" alt="">
+                            <p>&nbsp;&nbsp;당근</p>
+                        </div>
+                        <div class="getitem">
+                            <p class="date"></p>
+                            <p class="price">
+                                <span class="mint" id="2_mint"></span>원<span class="unit">/kg</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <img src="../background/3.png">
+                    <div class="contents">
+                        <div class="whiteicon">
+                            <img src="../whiteicon/3.png" alt="">
+                            <p>감자</p>
+                        </div>
+                        <div class="getitem">
+                            <p class="date"></p>
+                            <p class="price">
+                                <span class="mint" id="3_mint"></span>원<span class="unit">/kg</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div class="swiper-pagination"></div>
+    <div class="buttonset">
+        <p class="buttontitle">바로가기</p>
+        <ul>
+            <li class="vege">
+                <div class="button" onclick="clickButton('양파')">
+                    <img src="../icon/1.png" alt="">
+                </div>
+                <p>양파</p>
+            </li>
+            <li class="vege">
+                <div class="button" onclick="clickButton('당근')">
+                    <img src="../icon/2.png" alt="">
+                </div>
+                <p>당근</p>
+            </li>
+            <li class="vege">
+                <div class="button" onclick="clickButton('감자')">
+                    <img src="../icon/3.png" alt="">
+                </div>
+                <p>감자</p>
+            </li>
+            <li>
+                <div class="button">
+                    <img src="../icon/5.png" alt="">
+                </div>
+                <p>준비중</p>
+            </li>
+        </ul>
+    </div>
+    <div data-include-file="./banner.html" class="footer-wrap includeJs"></div>
+</body>
+<script src="../js/banner.js"></script>
+<script src="../js/index.js"></script>
+<script>
+    const swiper = new Swiper('.swiper', {
+        // Optional parameters
+        loop: true,
+        slidesPerView: 1,
+        // If we need pagination
+        pagination: {
+            el: '.swiper-pagination',
+        }
+    });
+
+    let today = new Date();
+    today.setDate(today.getDate() - 1)
+
+    let month = today.getMonth() + 1;
+    let date = today.getDate();
+
+    let setDate = document.querySelectorAll(".date");
+    setDate.forEach(Element => {
+        Element.innerText = `${month}월 ${date}일`
+    })
+
+    const vege = document.querySelectorAll('.vege');
+
+    vege.forEach(Element => {
+        Element.addEventListener('click', function () {
+            const vegeName = this.querySelector('p').innerText;
+            localStorage.setItem('key', vegeName)
+        })
+    })
+</script>
+
+</html>
