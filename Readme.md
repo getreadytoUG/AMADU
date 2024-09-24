@@ -10,8 +10,7 @@
 - 농사에 필요한 날씨 정보와 건강 정보, 병해충 정보, 도매시장 정보 등을 미리 알려주고 이용자가 재배하는 작물의 수확 주기를 추적하여 기간 별 필요한 행위를 가이드합니다.
 - AMADU AI 모델은 이용자가 재배하고자 하는 작물의 수확 예상 일시와 수확량을 예측하고, 이용자로부터 재배 면적을 입력받아 최종적으로 재배 작물의 이익을 계산합니다. 이를 이용하여 우리는 현재의 상황에서 어떤 작물을 얼마만큼 재배할 것인지에 대한 의사결정에 도움을 받을 수 있습니다.
 
-<img width="100%" alt="image" src="https://github.com/user-attachments/assets/836f260a-660d-484f-89f8-50e53b82efcb
-">
+<img width="100%" alt="image" src="https://github.com/user-attachments/assets/836f260a-660d-484f-89f8-50e53b82efcb">
 
 <hr>
 
